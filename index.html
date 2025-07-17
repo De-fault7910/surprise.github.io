@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800"
+    />
+    <title>Happy Birthday Emmanuella!</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <style>
+      .love-note {
+        background-image: url("images/images (4).jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+      }
+
+      .love-note::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: inherit;
+        z-index: 0;
+      }
+
+      .love-note > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes spinY {
+        0% { transform: rotateY(0deg); }
+        100% { transform: rotateY(360deg); }
+      }
+
+      .spin-y {
+        display: inline-block;
+        animation: spinY 2s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] justify-between overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      
+      <!-- Confetti container -->
+      <div id="confetti-container"></div>
+
+      <!-- Top image -->
+      <div>
+        <div class="@container">
+          <div class="@[480px]:px-4 @[480px]:py-3">
+            <div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#fcfaf8] @[480px]:rounded-xl min-h-80">
+              <img src="images/vivid-birthday-cake-background-free-photo.jpg" alt="Birthday Cake" class="w-70 h-80 object-cover rounded-xl" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-[#1c160d] tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">
+        Happy 17th Birthday, Emmanuella! <span class="text-red-500 spin-y">❤️</span>
+      </h1>
+      <p class="text-[#1c160d] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
+        Celebrating your special day with joy and love.
+      </p>
+
+      <!-- Birthday quote -->
+      <div class="px-4 py-2">
+        <div class="bg-[#f4eee7] rounded-xl p-4 text-center">
+          <p class="text-[#1c160d] text-lg font-medium italic">
+            "Wishing you a year filled with happiness, success, and all the things you love!"
+          </p>
+        </div>
+      </div>
+
+      <!-- Letter 1 -->
+      <h2 class="text-[#1c160d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Birthday Wishes</h2>
+      <div class="px-4">
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <p class="text-[#1c160d] text-base font-normal leading-normal">
+            Dear Emmanuella,<br><br>
+            On your 17th birthday, I want you to know how special you are to me. 
+            May this milestone year bring you endless joy, exciting adventures, and dreams come true. 
+            Wishing you health, happiness, and success in everything you do!<br><br>
+            With love,<br>
+            Cobbah Judah.
+          </p>
+        </div>
+      </div>
+
+      <!-- Letter 2 -->
+      <h2 class="text-[#1c160d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">From My Heart</h2>
+      <div class="px-4">
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <p class="text-[#1c160d] text-base font-normal leading-normal">
+            "On this day, the world was blessed with someone truly amazing — you. 
+            Your smile brightens my days, and your love inspires my world. Happy 19th, my Dear. I’m proud of the woman you’re becoming."
+          </p>
+        </div>
+      </div>
+
+      <!-- Photos and love note -->
+      <h2 class="text-[#1c160d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Photo Memories</h2>
+      <div class="flex flex-col md:flex-row gap-6 px-4">
+        <div class="grid grid-cols-2 gap-5 flex-1 md:w-2/3">
+          <div><img src="images/ella2.jpg" alt="Celebrating with friends" class="rounded-xl object-cover w-full h-60" /></div>
+          <div><img src="images/ella1.jpg" alt="Joyful moments" class="rounded-xl object-cover w-full h-60" /></div>
+          <div><img src="images/ella3.jpg" alt="Delicious cake" class="rounded-xl object-cover w-full h-60" /></div>
+          <div><img src="images/images (2).jpeg" alt="Special gifts" class="rounded-xl object-cover w-full h-60" /></div>
+        </div>
+
+        <!-- Love note -->
+        <div class="flex-1 flex items-center justify-center">
+          <div class="love-note w-full max-w-sm min-h-[500px] h-auto rounded-xl p-6 bg-white bg-opacity-80 shadow-md flex flex-col justify-center">
+            <h3 class="text-xl font-bold text-pink-600 mb-4 text-center">To Emmanuella ❤️</h3>
+            <p class="text-[#1c160d] text-base leading-relaxed">
+              Hey Emmanuella,<br /><br />
+              I don’t say it enough, but you mean so much to me. Just seeing your smile makes my day better. 
+              You’re smart, beautiful, and honestly... my favorite person.<br /><br />
+              Happy birthday again — I’m really glad you exist. ❤️<br /><br />
+              – Judah
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ending -->
+      <h2 class="text-[#1c160d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"></h2>
+      <div class="flex gap-4 py-6 px-4">
+        <div class="flex grow basis-0 flex-col items-stretch gap-4">
+          <div class="flex h-14 grow items-center justify-center rounded-xl px-3 bg-[#f4eee7]">
+            <p class="text-[#1c160d] text-lg font-bold leading-tight tracking-[-0.015em]">Happy Birthday</p>
+          </div>
+          <div class="grid grid-cols-3 gap-3 px-0">
+            <img src="images/images (3).jpeg" alt="Left" class="rounded-xl object-cover w-full h-32" />
+            <img src="images/images (1).jpeg" alt="Center" class="rounded-xl object-cover w-full h-32" />
+            <img src="images/download (5).jpeg" alt="Right" class="rounded-xl object-cover w-full h-32" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-[#f4eee7] text-center py-6 mt-10">
+  <div class="flex flex-col items-center justify-center gap-2">
+    <!-- Profile Image -->
+    <img src="images/judah.jpg" 
+     alt="Cobbah Judah" 
+     class="w-28 h-28 rounded-full border-4 border-[#1c160d] object-cover shadow-md" />
+
+
+    <!-- Footer Text -->
+    <p class="text-[#1c160d] text-sm font-medium">
+      Made with ❤️ by <span class="font-bold">Cobbah Judah</span><br>
+      For the one and only <span class="text-pink-600 font-semibold">Emmanuella</span> 💖
+    </p>
+    <p class="text-[#1c160d] text-xs mt-1">© 2025 | All rights reserved</p>
+  </div>
+</footer>
+
+
+    <!-- 🎉 Confetti Trigger Script -->
+    <script>
+      window.onload = function () {
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+
+        setTimeout(() => {
+          confetti({ particleCount: 100, spread: 100, origin: { y: 0.5 } });
+        }, 800);
+
+        setTimeout(() => {
+          confetti({ particleCount: 120, spread: 120, origin: { y: 0.4 } });
+        }, 1600);
+      };
+    </script>
+  </body>
+</html>
