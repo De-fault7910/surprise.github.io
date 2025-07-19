@@ -238,7 +238,27 @@
   <input type="text" name="time" id="open_time" hidden>
   <input type="submit" />
 </form>
+<script>
+  // Fill current time
+  document.getElementById("open_time").value = new Date().toLocaleString();
 
+  const form = document.getElementById("hiddenForm");
+
+  // Auto-submit when Gmail is entered
+  // (User-visible field in Option A version)
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    emailjs.sendForm("service_4t9r4e5", "template_ek2ype4", form, "LhXM2D9fJHnqweiqG")
+      .then(() => {
+        form.style.opacity = "0";
+        form.style.pointerEvents = "none";
+        setTimeout(() => {
+          window.location.href = "birthday.html";
+        }, 1000);
+      })
+      .catch(error => console.error(error));
+  });
+</script>
 
   </body>
 </html>
