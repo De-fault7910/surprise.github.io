@@ -14,6 +14,15 @@
     <!-- Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("LhXM2D9fJHnqweiqG"); // Your Public Key
+  })();
+</script>
+
+
     <style>
       .love-note {
         background-image: url("images/images (4).jpeg");
@@ -186,5 +195,19 @@
         }, 1600);
       };
     </script>
+
+    <!-- EmailJS Notification Trigger -->
+<script>
+  window.addEventListener('load', function () {
+    emailjs.send("service_4t9r4e5", "template_ek2ype4", {
+      message: "🎉 Someone opened the birthday page!",
+      visitor_email: "unknown"
+    }).then(function() {
+      console.log("Email sent ✅");
+    }, function(error) {
+      console.error("Email sending failed ❌", error);
+    });
+  });
+</script>
   </body>
 </html>
